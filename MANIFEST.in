@@ -1,0 +1,3 @@
+include README.md
+include memetics/data/memes_basic_white_light_model_20190124.h5
+include memetics/data/model.hdf5
