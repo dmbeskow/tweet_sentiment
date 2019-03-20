@@ -27,10 +27,10 @@ def sentiment_prob(text_list):
     and predictions closer 1 are more positive.  
     '''
 
-    model_path = pkg_resources.resource_filename('memetics', 'data/sentiment_LSTM_20190320.h5')
+    model_path = pkg_resources.resource_filename('tweet_sentiment', 'data/sentiment_LSTM_20190320.h5')
     lstm_model = load_model(model_path)
     
-    tokenizer_path = pkg_resources.resource_filename('memetics', 'data/sentiment_tokenizer.json.gz')
+    tokenizer_path = pkg_resources.resource_filename('tweet_sentiment', 'data/sentiment_tokenizer.json.gz')
     with io.TextIOWrapper(gzip.open(tokenizer_path, 'r')) as f:
         data = json.load(f)
     tokenizer = keras.preprocessing.text.tokenizer_from_json(data)
